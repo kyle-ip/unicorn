@@ -25,6 +25,18 @@ class Route(object):
         return decorator
 
 
+def merge(item_list):
+    """ 组装controller参数 """
+
+    url_list = []
+    for prefix, suffix_list in item_list.items():
+        for item in suffix_list:
+            url_list.append({
+                "url": prefix + item[0],
+                "view": item[1],
+                "endpoint": item[1]
+            })
+    return url_list
 
 # 使用装饰器添加路由：每个函数表示一个业务逻辑，修改处理逻辑时整个函数都要被修改
 # @app.route("/", methods=["GET"])          # 即调用Route的call方法

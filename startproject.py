@@ -12,7 +12,7 @@ root_path = os.getcwd()
 directory_list = [
     'dbconnector',
     'exceptions',
-    'utils',
+    'helper',
     'route',
     'session',
     'template_engine',

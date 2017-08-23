@@ -13,7 +13,7 @@ from werkzeug.wrappers import Response
 
 import unicorn.exceptions as exceptions
 from unicorn.wsgi_adapter import wsgi_app
-from unicorn.utils import parse_static_key
+from unicorn.helper import parse_static_key
 from unicorn.route import Route
 from unicorn.settings import TypeMap
 from unicorn.template_engine import replace_template
@@ -129,15 +129,16 @@ class Unicorn(object):
             func=view_class.get_func(endpoint), func_type="_view", url=url
         )
 
-    def load_controller(self, controller):
+    def load_controller(self, controllers):
         """ 加载控制器 """
 
-        name = controller.__name__()
-        for rule in controller.url_map:
-            self.bind_view(
-                url=rule["url"], view_class=rule["view"],
-                endpoint=name + "." + rule["endpoint"]      # 节点名为：控制器.节点
-            )
+        for controller in controllers:
+            name = controller.__name__()
+            for rule in controller.url_map:
+                self.bind_view(     # 节点名：控制器.节点
+                    url=rule["url"], view_class=rule["view"],
+                    endpoint=name + "." + rule["endpoint"]
+                )
 
     @exceptions.captcure
     def add_url_rule(
