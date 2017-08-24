@@ -5,8 +5,14 @@
 # @File    : __init__.py
 # @Software: PyCharm
 
+import os
+import json
+
+from werkzeug.wrappers import Response
+
+import unicorn.exceptions as exceptions
 from unicorn.session import AuthSession, session
-from unicorn import redirect
+from unicorn.template_engine import replace_template
 
 
 class View(object):
@@ -39,6 +45,7 @@ class View(object):
 
 class BaseView(View):
     """ 视图基类 """
+
     methods = ["GET", "POST"]
 
     def post(self, request):
@@ -67,12 +74,62 @@ class BaseView(View):
         else:
             return '<h1>Unknown or unsupported require method</h1>'
 
+    def get_arg(self, request, arg, default=None):
+        """ 获取请求参数 """
+        value = request.args.get(arg, None)
+        value = request.form.get(arg, None) if not value else value
+        return value if value else default
+
+    def render_template(self, path, **kwargs):
+        """ 返回模板 """
+        return replace_template(path, **kwargs)
+
+    def render_json(self, data):
+        """ 封装json数据 """
+        content_type = "text/plain"
+        if isinstance(data, (dict, list)):
+            data = json.dumps(data)
+            content_type = "application/json"
+        return Response(
+            response=data,
+            content_type="{0}; charset=UTF-8".format(content_type),
+            status=200
+        )
+
+    @staticmethod
+    def redirect(url, status_code=302):
+        """ URL重定向 """
+        response = Response("", status=status_code)
+        response.headers["Location"] = url
+        return response
+
+    @exceptions.captcure
+    def render_file(self, file_path, file_name=None):
+        """ 文件下载 """
+
+        if os.path.exists(file_path):
+            if not os.access(file_path, os.R_OK):
+                raise exceptions.RequirePermissionError
+            with open(file_path, "rb") as f:
+                content = f.read()
+            if not file_name:
+                file_name = file_path.split("/")[-1]
+
+            headers = {
+                "Content-Disposition": "attachment; filename='{0}'".format(
+                    file_name
+                )
+            }
+            return Response(
+                response=content, headers=headers, status=200
+            )
+
 
 class AuthLogin(AuthSession):
 
     @staticmethod
     def auth_fail_callback(request, *args, **options):
-        return redirect("/login")
+        return BaseView.redirect("/login")
 
     @staticmethod
     def auth_logic(request, *args, **kwargs):

@@ -14,3 +14,12 @@ TypeMap = {
     'jpg': 'image/jpeg',
     'jpeg': 'image/jpeg'
 }
+
+
+TEMPLATE_PATH = "templates"
+STATIC_PATH = "static"
+MEDIA_PATH = "media"
+SESSION_PATH = ".session"
+
+DEFAULT_HEADER = {"Server": "Unicorn Web 0.1"}
+DEFAULT_CONTENT_TYPE = "text/html; charset=UTF-8"

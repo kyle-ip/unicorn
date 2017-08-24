@@ -22,6 +22,7 @@ class Route(object):
                 url, func, "_route", **kwargs
             )
             return func
+
         return decorator
 
 
@@ -34,7 +35,7 @@ def merge(item_list):
             url_list.append({
                 "url": prefix + item[0],
                 "view": item[1],
-                "endpoint": item[1]
+                "endpoint": item[2]
             })
     return url_list
 

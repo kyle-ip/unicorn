@@ -10,9 +10,9 @@ import os
 root_path = os.getcwd()
 
 directory_list = [
-    'dbconnector',
+    'model',
     'exceptions',
-    'helper',
+    'common',
     'route',
     'session',
     'template_engine',

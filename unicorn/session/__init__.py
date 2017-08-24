@@ -6,7 +6,6 @@
 # @Software: PyCharm
 
 import os
-import json
 import base64
 import time
 import pickle
@@ -16,9 +15,6 @@ def create_session_id():
     return base64.encodebytes(
         str(time.time()).encode()
     ).decode().replace("=", '')[:-2][::-1]
-    # return base64.encodebytes(
-    #     str(time.time()).encode()
-    # ).replace("=", '')[:-2][::-1]
 
 # 规则：首先获取当前时间戳，转换为字符串并编码为字节流，
 # 再 Base64 编码、解码为字符串，然后去掉 Base64 编码会出现的“=”号，取到倒数第二位，最后再进行倒序排列
@@ -88,7 +84,7 @@ class Session(object):
 
     def get(self, request, item):
         """ 获取当前会话某个项 """
-        return self.__session_map__.get(get_session_id(request), {}).get(item, None)
+        return self.__session_map__.get(get_session_id(request), {}).get(item, "")
 
 
 class AuthSession(object):
