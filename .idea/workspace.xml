@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dda4a21a-0da8-4947-b99b-2f933e43133b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/ATOZ_.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/image/user_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/skin/default/icon-ext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/skin/default/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/skin/default/loading-0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/skin/default/loading-1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/skin/default/loading-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/index/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/index/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/jquery-1.11.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/jquery.tmpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/login/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/login/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/skin/default/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/user/list.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/user/list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/index_view.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.session/QTO0UDO04yN0ATN2UzMwUTM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/unicorn/dbconnector/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/admin_view.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/__init__.py" afterPath="$PROJECT_DIR$/models/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runserver.py" afterPath="$PROJECT_DIR$/runserver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/__init__.py" afterPath="$PROJECT_DIR$/unicorn/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/common/__init__.py" afterPath="$PROJECT_DIR$/unicorn/common/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/model/__init__.py" afterPath="$PROJECT_DIR$/unicorn/model/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/session/__init__.py" afterPath="$PROJECT_DIR$/unicorn/session/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/settings.py" afterPath="$PROJECT_DIR$/unicorn/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/template_engine/__init__.py" afterPath="$PROJECT_DIR$/unicorn/template_engine/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unicorn/view/__init__.py" afterPath="$PROJECT_DIR$/unicorn/view/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.session/QTO0ATO34CM5EDO1UzMwUTM" afterPath="$PROJECT_DIR$/.session/cjM5IDN34iNygTMzkzMwUTM" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
