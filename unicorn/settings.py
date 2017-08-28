@@ -23,3 +23,6 @@ SESSION_PATH = ".session"
 
 DEFAULT_HEADER = {"Server": "Unicorn Web 0.1"}
 DEFAULT_CONTENT_TYPE = "text/html; charset=UTF-8"
+
+INDENT_STEP = 4
+

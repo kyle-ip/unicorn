@@ -1,0 +1,192 @@
+body * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Source Code Pro for Powerline";
+}
+
+.content-box-header {
+    text-align: center;
+    line-height: 50px;
+}
+
+.content-box .content-box-header {
+    position: absolute;
+    height: 50px;
+    top: 0;
+    left: 220px;
+    right: 0;
+}
+
+.content-box .content-box-nav {
+    position: absolute;
+    width: 220px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    background-color: #263238;
+    color: #abb1b7;
+}
+
+.content-box .content-box-body {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    top: 50px;
+    left: 220px;
+    bottom: 0;
+    background-color: #ECF0F5;
+}
+
+.nav-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    min-height: 50px;
+    background-color: rgba(27, 32, 36, 0.31);
+    text-align: center;
+}
+
+.user-info p {
+    margin-top: 5px;
+}
+
+.user-info {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 20px 12px;
+    text-align: center;
+    height: 100px;
+    background: url("/static/image/user_background.png");
+    background-size: cover;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.8);
+}
+
+.user-info-image {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 90px;
+}
+
+.content-box-nav li {
+    line-height: 45px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.content-box-nav li a {
+    color: #abb1b7;
+}
+
+.content-box-nav li a {
+    line-height: 45px;
+    display: block;
+}
+
+.content-box-nav li a:visited {
+    text-decoration: none;
+}
+
+.content-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.content-box-nav li:hover {
+     background-color: rgba(255,255,255, 0.1);
+    /* box-shadow: inset 3px 0 0 0 rgba(22, 114, 184, 0.74); */
+    color: #fff;
+}
+
+.active-li {
+    background-color: rgba(35,146,251,0.1);
+    box-shadow: inset 3px 0 0 0 #2392fb;
+    color: #fff;
+}
+
+.active-li a {
+    color: #fff!important;
+}
+
+.active-li:hover {
+    background-color: rgba(35,146,251,0.1)!important;
+}
+
+.fa-power-off {
+    color: red;
+    font-size: 25px!important;
+    line-height: 50px!important;
+}
+
+.nav-header p {
+    line-height: 50px;
+}
+
+.fa-wechat {
+    color: #54a800;
+}
+
+.fuckIt {
+    width: 300px!important;
+    height: auto;
+    /*top: 0!important;*/
+    /*margin-top: 10%!important;*/
+    opacity: 0.9!important;
+    border-radius: 5px!important;
+}
+
+.fuckIt .layui-layer-title {
+    background: linear-gradient(to right, #56b0eb, #96d5ef);
+    border: 0;
+    color: #d7eef5;
+    font-size: 18px;
+}
+
+.fuckIt .layui-layer-content {
+    border-radius: 0 0 5px 5px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.fuckIt .layui-layer-ico {
+    background: none;
+}
+
+.fuckIt .layui-layer-close1:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 14px;
+    height: 3px;
+    transform: rotate(45deg);
+    left: 8px;
+    background-color: #d7eef5;
+}
+
+.fuckIt .layui-layer-close1:after {
+    content: '';
+    transform: rotate(-45deg);
+    left: 8px;
+    position: absolute;
+    top: 5px;
+    width: 14px;
+    height: 3px;
+    background-color: #d7eef5;
+}
+
+.fuckIt .layui-layer-content {
+    /*background-color: rgba(172,211,232,0.8);*/
+}
+
+.fuckIt .layui-layer-btn {
+    /*background-color: rgba(172,211,232,0.8);*/
+}

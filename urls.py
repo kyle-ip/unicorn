@@ -7,33 +7,20 @@
 
 from unicorn.view import Controller
 from unicorn.route import merge
-from views.admin_view import LoginView, LogoutView, IndexView
+from views.index_view import Index, Login, Message, Stream
 
 index = Controller(
     "index",
     merge({
-        "": [
-            ("/", IndexView, "index"),
-            ("/login", LoginView, "login"),
-            ("/logout", LogoutView, "logout")
+        "/": [
+            ("", Index, "index"),
+            ("login", Login, "login"),
+            ("stream", Stream, "stream"),
+            ("message", Message, "message"),
         ],
-    })
-)
-
-api = Controller(
-    "api",
-    merge({
-        "/api/test": [
-            ("/user_info/?", LoginView, "test_user_info"),
-        ],
-        "/api/service": [
-            ("/mac_info/?", LoginView, "mac_info"),
-            ("/user_info/?", LoginView, "user_info"),
-        ]
     })
 )
 
 controller_list = [
     index,
-    api
 ]

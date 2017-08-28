@@ -5,3 +5,7 @@
 # @File    : url
 # @Software: PyCharm
 
+from unicorn.model import RedisDB
+from settings import REDIS_CONNECTIONS
+
+local_redis = RedisDB(REDIS_CONNECTIONS["default"]["local_redis"])

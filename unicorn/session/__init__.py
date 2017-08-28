@@ -62,6 +62,8 @@ class Session(object):
 
     def push(self, request, item, value):
         """ 更新或添加记录 """
+
+        print("OK")
         session_id = get_session_id(request)
         if session_id in self.__session_map__:
             self.__session_map__[get_session_id(request)][item] = value
@@ -82,9 +84,10 @@ class Session(object):
         """ 获取当前会话记录 """
         return self.__session_map__.get(get_session_id(request), {})
 
-    def get(self, request, item):
+    def get(self, request, item, value=""):
         """ 获取当前会话某个项 """
-        return self.__session_map__.get(get_session_id(request), {}).get(item, "")
+        item = self.__session_map__.get(get_session_id(request), {}).get(item)
+        return item if item else value
 
 
 class AuthSession(object):

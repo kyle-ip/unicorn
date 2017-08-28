@@ -5,7 +5,7 @@
 # @File    : url
 # @Software: PyCharm
 
-CONNECTIONS = {
+MYSQL_CONNECTIONS = {
     "default": {
         "data_center": {
             "host": "127.0.0.1",
@@ -38,4 +38,13 @@ CONNECTIONS = {
     }
 }
 
-
+REDIS_CONNECTIONS = {
+    "default": {
+        "local_redis": {
+            'host': '127.0.0.1',
+            'port': '6379',
+            'password': "",
+            'db': 1
+        }
+    }
+}

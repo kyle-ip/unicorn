@@ -11,5 +11,5 @@ from unicorn import Unicorn
 
 app = Unicorn()
 app.load_controller(controllers=controller_list)
-app.run()
+app.run(threaded=True)
 

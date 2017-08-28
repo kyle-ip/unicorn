@@ -11,7 +11,7 @@ import json
 from werkzeug.wrappers import Response
 
 import unicorn.exceptions as exceptions
-from unicorn.session import AuthSession, session
+from unicorn.session import AuthSession, session, get_session_id
 from unicorn.template_engine import replace_template
 
 
@@ -46,18 +46,21 @@ class View(object):
 class BaseView(View):
     """ 视图基类 """
 
-    methods = ["GET", "POST"]
+    methods = ["GET", "POST", "PUT", "DELETE"]
+    request = None
+    session_id = None
+    session_map = None
 
-    def post(self, request):
+    def post(self):
         pass
 
-    def get(self, request):
+    def get(self):
         pass
 
-    def put(self, request):
+    def put(self):
         pass
 
-    def delete(self, request):
+    def delete(self):
         pass
 
     def dispatch_request(self, request, *args, **kwargs):
@@ -67,17 +70,21 @@ class BaseView(View):
             "PUT": self.put,
             "DELETE": self.delete,
         }
+
+        self.request = request
+        self.session_id = get_session_id(request)
+        self.session_map = session.map(request)
+
         if request.method in methods_meta:
-
             # 以调用由子类实现的get、post等请求处理方法
-            return methods_meta[request.method](request, *args, **kwargs)
+            return methods_meta[request.method](*args, **kwargs)
         else:
-            return '<h1>Unknown or unsupported require method</h1>'
+            raise exceptions.InvalidRequestMethodError
 
-    def get_arg(self, request, arg, default=None):
+    def get_arg(self, arg, default=None):
         """ 获取请求参数 """
-        value = request.args.get(arg, None)
-        value = request.form.get(arg, None) if not value else value
+        value = self.request.args.get(arg, None)
+        value = self.request.form.get(arg, None) if not value else value
         return value if value else default
 
     def render_template(self, path, **kwargs):

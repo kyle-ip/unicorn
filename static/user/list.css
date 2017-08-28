@@ -1,0 +1,159 @@
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+.content-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    background-color: rgba(183, 199, 205, 0.5);
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.content-box {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    background-color: #ECF0F5;
+    overflow: auto;
+}
+
+.user-box {
+    width: 250px;
+    min-height: 90px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 2px 1px lightgray;
+    background-color: #FFFFFF;
+    margin: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.user-box img {
+    order: 1;
+    flex-grow: 0;
+    width: 60px;
+    height: 60px;
+    margin: 10px 5px;
+    border-radius: 90px;
+}
+
+.user-box .user-detail {
+    display: inline-flex;
+    order: 2;
+    flex-grow: 1
+}
+
+.user-box ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.user-box li {
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-box .fa-mars {
+    color: cornflowerblue;
+}
+
+.user-box .fa-venus {
+    color: #DC22A3;
+}
+
+.content-header li {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 49px;
+    margin: 0 0 0 10px;
+}
+
+.content-header li input {
+    border-radius: 5px;
+    height: 22px;
+    padding: 3px 5px;
+    width: auto;
+    background-color: #fff;
+    border: 0;
+}
+
+.content-header li p {
+    margin-right: 5px;
+    color: black
+}
+
+.content-header li #message {
+    width: 800px;
+}
+
+.fuckIt {
+    width: 300px!important;
+    height: auto;
+    /*top: 0!important;*/
+    /*margin-top: 10%!important;*/
+    opacity: 0.9!important;
+    border-radius: 5px!important;
+}
+
+.fuckIt .layui-layer-title {
+    background: linear-gradient(to right, #4782b0 , #6495af);
+    border: 0;
+    color: #d7eef5;
+    font-size: 18px;
+}
+
+.fuckIt .layui-layer-content {
+    border-radius: 0 0 5px 5px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.fuckIt .layui-layer-ico {
+    background: none;
+}
+
+.fuckIt .layui-layer-close1:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 14px;
+    height: 3px;
+    transform: rotate(45deg);
+    left: 8px;
+    background-color: #d7eef5;
+}
+
+.fuckIt .layui-layer-close1:after {
+    content: '';
+    transform: rotate(-45deg);
+    left: 8px;
+    position: absolute;
+    top: 5px;
+    width: 14px;
+    height: 3px;
+    background-color: #d7eef5;
+}
+
+.fuckIt .layui-layer-content {
+    background-color: rgba(172,211,232,0.8);
+}
+
+.fuckIt .layui-layer-btn {
+    background-color: rgba(172,211,232,0.8);
+}

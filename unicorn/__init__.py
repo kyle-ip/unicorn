@@ -8,7 +8,7 @@
 import os
 
 from werkzeug.serving import run_simple
-from werkzeug.wrappers import Response
+from werkzeug.wrappers import Response, ResponseStream
 
 import unicorn.exceptions as exceptions
 from unicorn.wsgi_adapter import wsgi_app
@@ -181,6 +181,7 @@ class Unicorn(object):
                 headers=self.headers,
                 status=200
             )
+
         else:
             raise exceptions.InvalidRequestMethodError
 
@@ -195,6 +196,23 @@ class Unicorn(object):
 
         url = kwargs.get("url")
         return func_obj.func(url)
+
+    @staticmethod
+    def Response(
+            response="",
+            content_type=DEFAULT_CONTENT_TYPE,
+            headers=DEFAULT_HEADER,
+            mimetype="",
+            status=200
+
+    ):
+        if mimetype:
+            return Response(response=response, mimetype=mimetype)
+
+        return Response(
+            response=response, content_type=content_type,
+            headers=headers, mimetype=mimetype, status=status
+        )
 
 
 class ExceFunc(object):
