@@ -1,12 +1,12 @@
-# Unicorn - 简易的Web框架
-（并附上一个基于本框架、通过Redis发布订阅实现的聊天室demo）
+# Unicorn - 简易的 Web 框架
+（并附上一个基于本框架、通过 Redis 发布订阅实现的聊天室 demo）
 
 目前已基本实现：
-- WSGI接口
-- URL路由
+- WSGI 接口
+- URL 路由
 - 视图函数
 - 会话维持
-- JSON接口
+- JSON 接口
 - 数据库封装
 
 待实现：
