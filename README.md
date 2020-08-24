@@ -1,16 +1,37 @@
-# Unicorn - 简易的 Web 框架
-（并附上一个基于本框架、通过 Redis 发布订阅实现的聊天室 demo）
+# Unicorn
+[![Python](https://img.shields.io/badge/language-python-yellow.svg)]()
 
-目前已基本实现：
-- WSGI 接口
-- URL 路由
-- 视图函数
-- 会话维持
-- JSON 接口
-- 数据库封装
+A Python toy framework for building web applications.
 
-待实现：
-- 模板引擎
-- 文件上传/下载
-- 模块扩展
+## Features
 
+- WSGI interfaces
+- URL routing
+- View functions
+- Session
+- JSON interface
+- Database Access Wrapper
+
+## TODO
+
+- Template Engine
+- Static file management
+- Module Extention
+
+## Usage
+
+Python 3.5+ Required.
+
+```shell
+pip install -r requirements.txt
+```
+
+Run demo.
+
+```shell
+python runserver.py
+```
+
+## License
+
+See LICENSE file.
